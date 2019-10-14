@@ -3,6 +3,12 @@ tvartom.gather_facts
 
 An Ansible role to gather facts from var/files and the host.
 
+* Read variables in `/var/*.yml` from your playbook.
+* Read variables from `/root/host_vars.yml` on the host.
+* Use `ansible_facts` and make a readable `diskpace_message`.
+
+Read variables on the host is an alternative to ansible-vault.
+
 Install role
 ------------
 
@@ -22,13 +28,14 @@ Run:
     $ ansible-galaxy install -r requirements.yml -p roles/
 
 
-
-Requirements
+Usage
 ------------
 
-As an alternative to ansible-vault, a file with variables
-can be red from the host `/root/host_vars.yml`
+To read variable form the host you need `facts_gather.host_vars_from_host` set to true and
+create `/root/host_vars.yml` on the root.
 Make sure only root can access it.
+
+Example:
 
     ---
     mariadb:
@@ -43,13 +50,11 @@ Role Variables
 
 Return variables:
 
-* Any given in the variable files.
-* diskspace_message
+* Any given in the files with variables.
+* `diskspace_message`
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       tasks:
