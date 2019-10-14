@@ -1,6 +1,6 @@
 galaxy_info:
   author: tvartom
-  description: A role to gather facts from var/files and the host.
+  description: An Ansible role to gather facts from var/files and the host.
   company: Tvako AB
 
   # If the issue tracker for your role is not on github, uncomment the

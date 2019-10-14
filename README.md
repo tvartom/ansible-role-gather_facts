@@ -1,7 +1,7 @@
 tvartom.gather_facts
 ====================
 
-A role to gather facts from var/files and the host.
+An Ansible role to gather facts from var/files and the host.
 
 Install role
 ------------
