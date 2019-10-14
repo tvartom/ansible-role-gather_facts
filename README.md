@@ -6,7 +6,7 @@ A role to gather facts from var/files and the host.
 Install role
 ------------
 
-Create `requirements.yml` in your ansible playbook-folder.
+Create `requirements.yml` in your ansible playbook-folder:
 
     ---
     # Documentation:
