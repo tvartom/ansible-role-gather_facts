@@ -60,6 +60,7 @@ Example Playbook
       tasks:
         - include_role:
             name: tvartom.gather_facts
+            tasks_from: gather_facts
           vars:
             facts_options:
               var_files:

@@ -2,6 +2,7 @@
 #- name: Gather facts
 #  include_role:
 #    name: tvartom.gather_facts
+#    tasks_from: gather_facts
 #  vars:
 #    facts_options:
 #      [var_files:] # Read variables from files in var/[item].yml
